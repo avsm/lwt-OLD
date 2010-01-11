@@ -71,6 +71,9 @@ doc:
 examples:
 	$(MAKE) -C examples
 
+test:
+	$(MAKE) -C test
+
 dist:
 	DARCS_REPO=$(PWD) darcs dist -d $(NAME)-$(VERSION)
 
@@ -99,4 +102,4 @@ clean:
 	$(MAKE) -C examples clean
 
 
-.PHONY: sanitize all byte native opt examples install uninstall clean tests
+.PHONY: sanitize all byte native opt examples install uninstall clean
